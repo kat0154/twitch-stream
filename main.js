@@ -3,8 +3,8 @@ const tmi = require('tmi.js');
 const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
-		username: 'kat0154BOT',
-		password: 'oauth:wamyy4ethphy5f5l027p908dvofqms'
+		username: 'bot-name',
+		password: 'oauth:code'
 	},
 	channels: [ 'kat0154' ]
 });
