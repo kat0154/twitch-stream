@@ -11,10 +11,10 @@ module.exports = class twitchClient {
         this.bot = new tmi.Client({
             options: { debug: true },
             identity: {
-                username: 'kat0154BOT',
-                password: 'oauth:wamyy4ethphy5f5l027p908dvofqms'
+                username: 'bot-name',
+                password: 'oauth-code-here'
             },
-            channels: [ 'kat0154' ]
+            channels: [ 'channel-name-for-bot' ]
         });
         /* 
         * @returns {Array} command array
@@ -27,7 +27,7 @@ module.exports = class twitchClient {
         this.init = function(){
             bot.loadCommands();
             this.bot.connect().catch(console.error);
-            mongoose.connect('mongodb+srv://kat:P'+encodeURIComponent('@')+'ssword@twitchclient.yk76k.mongodb.net/bot', { useNewUrlParser: true, useUnifiedTopology: true })
+            mongoose.connect('mongoDB-connect-url', { useNewUrlParser: true, useUnifiedTopology: true })
             .catch((dbErr)=>{
                 console.log("DB Connection Error: ", dbErr.message);
             });
